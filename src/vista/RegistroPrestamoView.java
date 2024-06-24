@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 public class RegistroPrestamoView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTextField txtLibroId;
 	public JTextField txtUsuarioId;
 	public JTextField txtFechaPrestamo;

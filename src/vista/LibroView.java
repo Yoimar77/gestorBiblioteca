@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 public class LibroView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTable table;
 	public JTextField txtNombre;
 	public JTextField txtId;

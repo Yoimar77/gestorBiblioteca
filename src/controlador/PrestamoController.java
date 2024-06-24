@@ -1,5 +1,6 @@
 package controlador;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,24 +28,55 @@ public class PrestamoController implements ActionListener{
 		this.vista = vista;
 		this.modelo = modelo;
 		this.prestamo = prestamo;
-		
         this.registro=registro;
-        this.registro.btnAgregar.addActionListener(this);
-        this.registro.btnAtras.addActionListener(this);
-        
         this.modificar=modificar;
-        this.modificar.btnModificar.addActionListener(this);
-        this.modificar.btnBuscar.addActionListener(this);
-        this.modificar.btnAtras.addActionListener(this);
-        
 		this.vi=vi;
-        this.vista.btnVerTabla.addActionListener(this);
+        
+
+        // Configuraciones visuales y de comportamiento de la vista PrestamoView
+        configurarVistaPrestamo();
+
+        // Configuraciones visuales y de comportamiento de la vista RegistroPrestamoView
+        configurarVistaRegistro();
+
+        // Configuraciones visuales y de comportamiento de la vista ModificarprestamoView
+        configurarVistaModificar();
+
+	}
+
+	private void configurarVistaModificar() {
+		// TODO Auto-generated method stub
+		 this.modificar.btnModificar.addActionListener(this);
+	     this.modificar.btnBuscar.addActionListener(this);
+	     this.modificar.btnAtras.addActionListener(this);
+	     // Centra la ventana en la pantalla y evita que se pueda maximizar
+	     modificar.getContentPane().setBackground(new Color(240, 255, 240)); // Fondo verde claro
+	     modificar.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+	     modificar.setResizable(false); // Evita que se pueda maximizar la ventana
+
+	}
+
+	private void configurarVistaRegistro() {
+		// TODO Auto-generated method stub
+		this.registro.btnAgregar.addActionListener(this);
+        this.registro.btnAtras.addActionListener(this);
+		registro.getContentPane().setBackground(new Color(240, 248, 255)); // Color de fondo suave
+        registro.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        registro.setResizable(false); // Evita que se pueda maximizar la ventana
+	}
+
+	private void configurarVistaPrestamo() {
+		// TODO Auto-generated method stub
+		this.vista.btnVerTabla.addActionListener(this);
         this.vista.btnAgregarRegistro.addActionListener(this);
         this.vista.btnBuscar.addActionListener(this);
         this.vista.btnEliminar.addActionListener(this);
         this.vista.btnModificar.addActionListener(this);
         this.vista.btnAtras.addActionListener(this);
-
+      //color de fondo,centra ventana y evita maximizar ventana
+        vista.getContentPane().setBackground(new Color(240, 248, 255)); // Color de fondo azul claro
+        vista.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        vista.setResizable(false); // Evita que se pueda maximizar la ventana
 	}
 
 	@Override

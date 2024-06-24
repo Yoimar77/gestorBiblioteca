@@ -1,5 +1,6 @@
 package controlador;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -23,25 +24,55 @@ public class LibroController implements ActionListener {
 		this.vista = vista;
 		this.modelo = modelo;
 		this.libro = libro;
-
 		this.registro = registro;
-		this.registro.btnAgregar.addActionListener(this);
-		this.registro.btnAtras.addActionListener(this);
-
 		this.modificar = modificar;
+		this.vi = vi;
+
+		
+        // Configuraciones visuales y de comportamiento de la vista LibroView
+        configurarVistaLibro();
+
+        // Configuraciones visuales y de comportamiento de la vista RegistroLibroView
+        configurarVistaRegistro();
+
+        // Configuraciones visuales y de comportamiento de la vista ModificarlibroView
+        configurarVistaModificar();
+
+	}
+
+	private void configurarVistaModificar() {
 		this.modificar.btnBuscar.addActionListener(this);
 		this.modificar.btnModificar.addActionListener(this);
 		this.modificar.btnAtras.addActionListener(this);
+        // Centra la ventana en la pantalla y evita que se pueda maximizar
+    	modificar.getContentPane().setBackground(new Color(240, 255, 240)); // Fondo verde claro
+        modificar.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        modificar.setResizable(false); // Evita que se pueda maximizar la ventana
+		
+	}
 
-		this.vi = vi;
+	private void configurarVistaRegistro() {
+		this.registro.btnAgregar.addActionListener(this);
+		this.registro.btnAtras.addActionListener(this);
+		//color de fondo,centra ventana y evita maximizar ventana
+		registro.getContentPane().setBackground(new Color(240, 248, 255)); // Color de fondo suave
+        registro.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        registro.setResizable(false); // Evita que se pueda maximizar la ventana
+		
+	}
+
+	private void configurarVistaLibro() {
 		this.vista.btnVerTabla.addActionListener(this);
 		this.vista.btnAgregarRegistro.addActionListener(this);
 		this.vista.btnBuscar.addActionListener(this);
 		this.vista.btnEliminar.addActionListener(this);
 		this.vista.btnModificar.addActionListener(this);
 		this.vista.btnAtras.addActionListener(this);
-		;
-
+		//color de fondo,centra ventana y evita maximizar ventana
+        vista.getContentPane().setBackground(new Color(240, 248, 255)); // Color de fondo azul claro
+        vista.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+        vista.setResizable(false); // Evita que se pueda maximizar la ventana
+		
 	}
 
 	@Override

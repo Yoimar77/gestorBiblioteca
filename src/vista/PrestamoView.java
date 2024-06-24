@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 public class PrestamoView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTable table;
 	public JTextField txtIdLibro;
 	public JTextField txtId;

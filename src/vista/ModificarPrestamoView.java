@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 public class ModificarPrestamoView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTextField txtIdBuscar;
 	public JTextField txtLibroId;
 	public JButton btnModificar;
@@ -35,7 +35,7 @@ public class ModificarPrestamoView extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setBackground(new Color(240, 255, 240)); // Fondo verde claro
+		
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 public class ModificarCategoriaView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTextField txtId;
 	public JTextField txtNombre;
 	public JButton btnModificar;
@@ -26,7 +26,7 @@ public class ModificarCategoriaView extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setBackground(new Color(240, 255, 240)); // Fondo verde claro
+		
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -57,19 +57,15 @@ public class ModificarCategoriaView extends JFrame {
 		txtNombre.setColumns(10);
 		
 		btnBuscar = new JButton("BUSCAR");
-		btnBuscar.setFont(new Font("Tahoma", Font.BOLD, 12)); // Fuente y tamaño del botón
 		btnBuscar.setBounds(30, 87, 99, 20); // Posición y tamaño del botón
 		contentPane.add(btnBuscar);
 		
 		btnModificar = new JButton("MODIFICAR");
-		btnModificar.setFont(new Font("Tahoma", Font.BOLD, 12)); // Fuente y tamaño del botón
 		btnModificar.setBounds(170, 150, 120, 30); // Posición y tamaño del botón
 		contentPane.add(btnModificar);
 		
 		btnAtras = new JButton("<---");
-		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAtras.setBounds(0, -4, 57, 23);
-		btnAtras.setBackground(Color.red);
 		contentPane.add(btnAtras);
 	}
 

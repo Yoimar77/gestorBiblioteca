@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 public class ModificarLibroView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTextField txtIdBuscar;
 	public JTextField txtAutor;
 	public JButton btnModificar;

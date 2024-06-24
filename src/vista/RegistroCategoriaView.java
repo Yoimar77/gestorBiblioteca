@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 public class RegistroCategoriaView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
+	public JPanel contentPane;
 	public JTextField txtCategoria;
 	public JButton btnAgregar;
 	public JButton btnAtras;
@@ -23,7 +23,6 @@ public class RegistroCategoriaView extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(240, 248, 255)); // Color de fondo suave
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -40,15 +39,10 @@ public class RegistroCategoriaView extends JFrame {
 		txtCategoria.setColumns(10);
 
 		btnAgregar = new JButton("AGREGAR");
-		btnAgregar.setFont(new Font("Tahoma", Font.BOLD, 14)); // Fuente y tamaño del botón
-		btnAgregar.setBackground(new Color(70, 130, 180)); // Color de fondo del botón
-		btnAgregar.setForeground(Color.WHITE); // Color del texto del botón
 		btnAgregar.setBounds(304, 98, 120, 30); // Ajuste del tamaño y posición del botón
 		contentPane.add(btnAgregar);
 		
 		btnAtras = new JButton("<---");
-		btnAtras.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnAtras.setBackground(Color.RED);
 		btnAtras.setBounds(0, 0, 57, 23);
 		contentPane.add(btnAtras);
 		
